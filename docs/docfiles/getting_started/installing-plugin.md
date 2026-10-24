@@ -18,6 +18,10 @@ The plugin is installed from the Epic Games Launcher.
 
 ![Select engine version](/img/installing-2.png)
 
+:::note
+Unreal Engine 4.27 to 5.3 get an earlier version of the plugin that is no longer updated. Use Unreal Engine 5.4 or newer to get the latest version. See [Requirements](/#requirements).
+:::
+
 ## Verify plugin installation
 - Verify that the plugin was installed.
 

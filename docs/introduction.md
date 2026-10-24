@@ -29,6 +29,10 @@ Thumbnailer creates thumbnails and icons for your games and projects inside the 
 | Editor platforms | Windows, Mac, Linux |
 | Runtime | Editor only. Nothing from the plugin is included in a packaged game, only the textures it created. |
 
+:::note Older engine versions
+Updates and new features are only released for Unreal Engine 5.4 and newer. Unreal Engine 4.27 to 5.3 use an earlier version of the plugin, which can still be downloaded from Fab but is no longer updated. The earlier version has a different Thumbnailer window, so parts of this documentation don't apply to it.
+:::
+
 ## Where to go next
 1. [Install the plugin](/docfiles/getting_started/installing-plugin)
 2. [Capture your first thumbnail](/docfiles/getting_started/using-plugin)
