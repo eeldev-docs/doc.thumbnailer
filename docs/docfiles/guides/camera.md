@@ -21,7 +21,7 @@ All key bindings are listed in [Keyboard Shortcuts](/docfiles/reference/keyboard
 
 ## Focus and camera views
 - **Focus** (`F`) frames the whole asset and keeps the current camera angle.
-- The **Camera View** buttons on the right frame the asset from a fixed angle: **Front**, **Back**, **Top**, **Left**, **Right** or **Iso** (isometric, from above at 45°).
+- The **Camera View** buttons on the right frame the asset from a fixed angle: **Front**, **Back**, **Top**, **Left**, **Right** or **Iso** (isometric, from above at 45°). The button of the current view is highlighted until you move the camera. The default view is **Iso**.
 
 Both use the bounds of the asset, so the result is the same for small and large assets.
 

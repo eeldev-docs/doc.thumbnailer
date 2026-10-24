@@ -20,7 +20,7 @@ Thumbnailer creates thumbnails and icons for your games and projects inside the 
 - **A customizable preview scene**: lighting, environment, floor and post processing. See [Preview Scene](/docfiles/guides/preview-scene).
 - **Framing aids** in the preview: a crosshair, frame corners, grid and axes.
 - **Clean captures.** Anti-aliasing, auto exposure, motion blur and screen space reflections can be turned off while capturing, and editor billboards are hidden.
-- **Last Capture** preview in the window. Click it to find the texture in the Content Browser.
+- **Last Capture** preview in the window, with a larger preview and buttons to open, find and copy the texture.
 
 ## Requirements
 | | |

@@ -31,7 +31,7 @@ The editor renders in HDR, for example because HDR display output is turned on. 
 - The texture uses `2D Pixels (unfiltered)` and no mipmaps. If you show the thumbnail much smaller than its resolution, capture it at a lower resolution or change the texture settings.
 
 ## Where are my thumbnails?
-In `/Game/Thumbnails` by default. The folder is set with **Save Dir**, and the lower right corner of the window shows where the next capture goes. Click the notification, or the image under **Last Capture**, to find the texture in the Content Browser. See [Output and Naming](/docfiles/guides/output).
+In `/Game/Thumbnails` by default. The folder is set with **Save Dir**, and the lower right corner of the window shows where the next capture goes. Click the notification, or the browse button under **Last Capture**, to find the texture in the Content Browser. See [Output and Naming](/docfiles/guides/output).
 
 ## The capture timed out
 A notification says `Thumbnail capture timed out` if the capture is not done after 10 seconds. This can happen the first time you capture a transparent thumbnail while shaders are still compiling. Wait for the shaders to finish and capture again.

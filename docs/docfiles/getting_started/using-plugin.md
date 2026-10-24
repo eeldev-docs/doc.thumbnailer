@@ -36,7 +36,7 @@ The **Thumbnailer Plugin** menu in the level editor's main menu has links to the
 ## The result
 - The thumbnail is imported as a texture in `/Game/Thumbnails`. The file name is the **File Prefix** and the asset name, for example `Thumb_Cube`.
 - A notification shows the name of the new texture. Click the name to find it in the Content Browser.
-- The capture is shown under **Last Capture** in the window. Click it to find the texture in the Content Browser.
+- The capture is shown under **Last Capture** in the window. Click it to open a larger preview, or use the buttons below it to open the texture, find it in the Content Browser or copy its path.
 
 If a texture with the same name exists, you are asked whether to overwrite it. See [Output and Naming](/docfiles/guides/output) to change the folder, the name and the overwrite behavior.
 
