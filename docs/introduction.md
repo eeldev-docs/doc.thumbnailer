@@ -16,6 +16,8 @@ Thumbnailer creates thumbnails and icons for your games and projects inside the 
 - **Transparent backgrounds**, so the thumbnail can be placed on any UI. See [Transparent Thumbnails](/docfiles/guides/transparent-thumbnails).
 - **Any resolution**, saved as PNG or TGA and imported as a texture with UI-friendly settings. See [Output and Naming](/docfiles/guides/output).
 - **Camera views and bookmarks.** Frame the asset from the front, back, sides, top or an isometric angle with one click, and save up to ten camera positions on the number keys. See [Camera and Framing](/docfiles/guides/camera).
+- **Batch capture.** Capture every selected asset, or every asset in a folder, in one go. See [Batch Capture and Presets](/docfiles/guides/batch-and-presets).
+- **Presets** that save the settings, camera and scene profile as an asset you can share with your team.
 - **Perspective or orthographic camera**, with an adjustable field of view.
 - **A customizable preview scene**: lighting, environment, floor and post processing. See [Preview Scene](/docfiles/guides/preview-scene).
 - **Framing aids** in the preview: a crosshair, frame corners, grid and axes.

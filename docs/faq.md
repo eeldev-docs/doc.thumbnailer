@@ -37,10 +37,13 @@ In `/Game/Thumbnails` by default. The folder is set with **Save Dir**, and the l
 A notification says `Thumbnail capture timed out` if the capture is not done after 10 seconds. This can happen the first time you capture a transparent thumbnail while shaders are still compiling. Wait for the shaders to finish and capture again.
 
 ## My settings are different in another project or on another computer
-The settings are saved per user and per project in `EditorPerProjectUserSettings.ini`, and are not shared through source control. See [Settings](/docfiles/reference/settings).
+The settings are saved per user and per project in `EditorPerProjectUserSettings.ini`, and are not shared through source control. Use a [preset](/docfiles/guides/batch-and-presets#presets) to share them. See [Settings](/docfiles/reference/settings).
 
 ## Can I capture several assets at once?
-No, the plugin captures one asset at a time. Use [camera bookmarks](/docfiles/guides/camera#camera-bookmarks) to capture many assets from the same angle quickly.
+Yes. Select the assets in the Content Browser, or right-click a folder, and select **Capture Thumbnails**. See [Batch Capture and Presets](/docfiles/guides/batch-and-presets).
+
+## How do I share the same settings with my team?
+Save the settings as a preset with the save button in the **Preset** section. Presets are assets in Content and can be shared through source control. See [Presets](/docfiles/guides/batch-and-presets#presets).
 
 ## Is the plugin included in my packaged game?
 No. Thumbnailer is an editor plugin. Only the textures it creates are packaged, like any other texture.

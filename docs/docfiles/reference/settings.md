@@ -7,13 +7,14 @@ description: Every setting of the Thumbnailer plugin, with defaults.
 
 The settings are on the **Settings** tab in the Thumbnailer window, and in **Edit → Editor Preferences → Plugins → Thumbnailer**. Both show the same settings.
 
-The settings are saved per user and per project in `Saved/Config/<Platform>Editor/EditorPerProjectUserSettings.ini`, under `[/Script/Thumbnailer.ThumbnailerSettings]`. They are not shared through source control. The camera bookmarks and the default view are saved there too.
+The settings are saved per user and per project in `Saved/Config/<Platform>Editor/EditorPerProjectUserSettings.ini`, under `[/Script/Thumbnailer.ThumbnailerSettings]`. They are not shared through source control. The camera bookmarks, the default view and the last selected preset are saved there too. To share settings with your team, save them as a [preset](/docfiles/guides/batch-and-presets#presets).
 
 ## Camera
 | Setting | Default | Description |
 |---|---|---|
 | Camera Type | `Perspective` | `Perspective` or `Orthographic`. See [Camera and Framing](/docfiles/guides/camera#perspective-or-orthographic). |
 | Field of View (FOV) | `85` | The field of view of the perspective camera. A smaller value gives a flatter look. Only used with `Perspective`. |
+| Frame Each Asset | On | When capturing several assets, frames each asset from the current camera rotation. Turn off to keep the camera location, so every asset is captured at the same scale. See [Batch Capture](/docfiles/guides/batch-and-presets#framing). |
 
 ## Output
 | Setting | Default | Description |

@@ -45,6 +45,7 @@ The lower right shows the frame rate, the file name of the next capture and the 
 ## Right panel
 | Section | Description |
 |---|---|
+| **Preset** | Pick a preset to apply it, apply it again, or save the current settings, camera and scene profile as a preset. See [Presets](/docfiles/guides/batch-and-presets#presets). |
 | **Output** | Resolution, format (PNG or TGA) and transparent background. See [Output and Naming](/docfiles/guides/output). |
 | **Camera View** | Frames the asset from the front, back, top, left, right or an isometric angle. The view the camera is in is highlighted. |
 | **Last Capture** | The latest thumbnail, shown on a checkerboard so transparency is visible. Click it to open a larger preview. Below it are the name and size of the texture and buttons to open it in the texture editor, show it in the Content Browser, and copy its object path. |
