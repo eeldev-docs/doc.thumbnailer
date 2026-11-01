@@ -10,7 +10,7 @@ description: Answers to common questions and problems with the Thumbnailer plugi
 No asset is selected. Pick a static mesh, skeletal mesh or actor class on the **Asset** tab first.
 
 ## The background is not transparent
-- Check that **Custom Depth-Stencil Pass** is set to **Enabled on Demand** or **Enabled with Stencil** in **Project Settings → Engine → Rendering**.
+- In versions before 2.0.2, check that **Custom Depth-Stencil Pass** is set to **Enabled on Demand** or **Enabled with Stencil** in **Project Settings → Engine → Rendering**. From 2.0.2 the plugin enables it when you capture.
 - Check that **Transparent** is checked under **Output**. The **Transparent** badge is shown in the preview when it is.
 - The preview always shows the background. Only the captured thumbnail is transparent.
 

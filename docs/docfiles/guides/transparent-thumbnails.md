@@ -7,10 +7,14 @@ description: Capture thumbnails with a transparent background, for meshes and fo
 
 A transparent thumbnail only contains the asset. The background, the floor and the sky are removed, so the thumbnail can be placed on any UI.
 
-## Enable Custom Depth-Stencil Pass
-Transparent thumbnails use the custom depth pass to find the asset. Open **Edit → Project Settings → Engine → Rendering** and set **Custom Depth-Stencil Pass** to **Enabled on Demand**, or **Enabled with Stencil**.
+## Custom Depth-Stencil Pass
+Transparent thumbnails use the custom depth pass to find the asset. It is enabled by default in Unreal Engine. If **Custom Depth-Stencil Pass** is set to **Disabled** in **Edit → Project Settings → Engine → Rendering**, the plugin enables it when you capture. It stays enabled until the editor is closed, and the project settings are not changed.
+
+:::note Versions before 2.0.2
+Earlier versions don't enable it. Open **Edit → Project Settings → Engine → Rendering** and set **Custom Depth-Stencil Pass** to **Enabled on Demand**, or **Enabled with Stencil**.
 
 ![Custom Depth-Stencil Pass in Project Settings](/img/transparent-1.png)
+:::
 
 ## Turn on Transparent
 - Check **Transparent** under **Output** in the right panel. It is the same setting as **Transparent Thumbnail** under **Settings → Output**.
