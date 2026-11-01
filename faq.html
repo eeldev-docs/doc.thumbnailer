@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">FAQ &amp; Troubleshooting | Thumbnailer Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://thumbnailer.eeldev.com/faq"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ &amp; Troubleshooting | Thumbnailer Documentation"><meta data-rh="true" name="description" content="Answers to common questions and problems with the Thumbnailer plugin."><meta data-rh="true" property="og:description" content="Answers to common questions and problems with the Thumbnailer plugin."><link data-rh="true" rel="icon" href="/img/eeldev_icon.png"><link data-rh="true" rel="canonical" href="https://thumbnailer.eeldev.com/faq"><link data-rh="true" rel="alternate" href="https://thumbnailer.eeldev.com/faq" hreflang="en"><link data-rh="true" rel="alternate" href="https://thumbnailer.eeldev.com/faq" hreflang="x-default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="/assets/css/styles.97c7465c.css">
-<script src="/assets/js/runtime~main.8c2fb009.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.198e2f46.js" defer="defer"></script>
 <script src="/assets/js/main.0906540b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -28,7 +28,7 @@
 <p>No asset is selected. Pick a static mesh, skeletal mesh or actor class on the <strong>Asset</strong> tab first.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-background-is-not-transparent">The background is not transparent<a href="#the-background-is-not-transparent" class="hash-link" aria-label="Direct link to The background is not transparent" title="Direct link to The background is not transparent">​</a></h2>
 <ul>
-<li>Check that <strong>Custom Depth-Stencil Pass</strong> is set to <strong>Enabled on Demand</strong> or <strong>Enabled with Stencil</strong> in <strong>Project Settings → Engine → Rendering</strong>.</li>
+<li>In versions before 2.0.2, check that <strong>Custom Depth-Stencil Pass</strong> is set to <strong>Enabled on Demand</strong> or <strong>Enabled with Stencil</strong> in <strong>Project Settings → Engine → Rendering</strong>. From 2.0.2 the plugin enables it when you capture.</li>
 <li>Check that <strong>Transparent</strong> is checked under <strong>Output</strong>. The <strong>Transparent</strong> badge is shown in the preview when it is.</li>
 <li>The preview always shows the background. Only the captured thumbnail is transparent.</li>
 </ul>
