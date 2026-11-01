@@ -17,7 +17,7 @@ No asset is selected. Pick a static mesh, skeletal mesh or actor class on the **
 See [Transparent Thumbnails](/docfiles/guides/transparent-thumbnails).
 
 ## Parts of my actor are missing in a transparent thumbnail
-Every component that should be visible needs **Render CustomDepth Pass** turned on in the actor Blueprint. See [Actors](/docfiles/guides/transparent-thumbnails#actors).
+Components that are hidden, have **Hidden in Game** turned on, are editor-only or are added after the actor is spawned (for example in **BeginPlay**) are not included. In versions before 2.0.2, every component that should be visible needs **Render CustomDepth Pass** turned on in the actor Blueprint. See [Actors](/docfiles/guides/transparent-thumbnails#actors).
 
 ## My mesh disappears in a transparent thumbnail
 The mesh has Nanite turned on, and a red warning is shown below the preview. Turn off **Nanite Support** on the mesh, or capture it without a transparent background. See [Nanite](/docfiles/guides/transparent-thumbnails#nanite).
