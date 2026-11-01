@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">FAQ &amp; Troubleshooting | Thumbnailer Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://thumbnailer.eeldev.com/faq"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ &amp; Troubleshooting | Thumbnailer Documentation"><meta data-rh="true" name="description" content="Answers to common questions and problems with the Thumbnailer plugin."><meta data-rh="true" property="og:description" content="Answers to common questions and problems with the Thumbnailer plugin."><link data-rh="true" rel="icon" href="/img/eeldev_icon.png"><link data-rh="true" rel="canonical" href="https://thumbnailer.eeldev.com/faq"><link data-rh="true" rel="alternate" href="https://thumbnailer.eeldev.com/faq" hreflang="en"><link data-rh="true" rel="alternate" href="https://thumbnailer.eeldev.com/faq" hreflang="x-default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="/assets/css/styles.97c7465c.css">
-<script src="/assets/js/runtime~main.e84707e1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8c2fb009.js" defer="defer"></script>
 <script src="/assets/js/main.0906540b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -16,6 +16,7 @@
     <a class="eel-product-switcher__item" href="https://serveradmincore.eeldev.com">Server Admin Core</a>
     <a class="eel-product-switcher__item" href="https://hostmigrationcore.eeldev.com">HostMigrationCore</a>
     <a class="eel-product-switcher__item" href="https://eoscore.eeldev.com">EOSCore</a>
+    <a class="eel-product-switcher__item" href="https://crossplaycore.eeldev.com">CrossplayCore</a>
     <a class="eel-product-switcher__item" href="https://eventdispatcher.eeldev.com">EventDispatcher</a>
     <a class="eel-product-switcher__item" href="https://foliageplugin.eeldev.com">Foliage Plugin</a>
     <a class="eel-product-switcher__item" href="https://cls.eeldev.com">CommonLoadingScreen</a>
@@ -33,7 +34,7 @@
 </ul>
 <p>See <a href="/docfiles/guides/transparent-thumbnails">Transparent Thumbnails</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="parts-of-my-actor-are-missing-in-a-transparent-thumbnail">Parts of my actor are missing in a transparent thumbnail<a href="#parts-of-my-actor-are-missing-in-a-transparent-thumbnail" class="hash-link" aria-label="Direct link to Parts of my actor are missing in a transparent thumbnail" title="Direct link to Parts of my actor are missing in a transparent thumbnail">​</a></h2>
-<p>Every component that should be visible needs <strong>Render CustomDepth Pass</strong> turned on in the actor Blueprint. See <a href="/docfiles/guides/transparent-thumbnails#actors">Actors</a>.</p>
+<p>Components that are hidden, have <strong>Hidden in Game</strong> turned on, are editor-only or are added after the actor is spawned (for example in <strong>BeginPlay</strong>) are not included. In versions before 2.0.2, every component that should be visible needs <strong>Render CustomDepth Pass</strong> turned on in the actor Blueprint. See <a href="/docfiles/guides/transparent-thumbnails#actors">Actors</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-mesh-disappears-in-a-transparent-thumbnail">My mesh disappears in a transparent thumbnail<a href="#my-mesh-disappears-in-a-transparent-thumbnail" class="hash-link" aria-label="Direct link to My mesh disappears in a transparent thumbnail" title="Direct link to My mesh disappears in a transparent thumbnail">​</a></h2>
 <p>The mesh has Nanite turned on, and a red warning is shown below the preview. Turn off <strong>Nanite Support</strong> on the mesh, or capture it without a transparent background. See <a href="/docfiles/guides/transparent-thumbnails#nanite">Nanite</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-hdr-badge-is-shown-in-the-preview">The HDR badge is shown in the preview<a href="#the-hdr-badge-is-shown-in-the-preview" class="hash-link" aria-label="Direct link to The HDR badge is shown in the preview" title="Direct link to The HDR badge is shown in the preview">​</a></h2>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Transparent Thumbnails | Thumbnailer Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://thumbnailer.eeldev.com/docfiles/guides/transparent-thumbnails"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Transparent Thumbnails | Thumbnailer Documentation"><meta data-rh="true" name="description" content="Capture thumbnails with a transparent background, for meshes and for actor Blueprints."><meta data-rh="true" property="og:description" content="Capture thumbnails with a transparent background, for meshes and for actor Blueprints."><link data-rh="true" rel="icon" href="/img/eeldev_icon.png"><link data-rh="true" rel="canonical" href="https://thumbnailer.eeldev.com/docfiles/guides/transparent-thumbnails"><link data-rh="true" rel="alternate" href="https://thumbnailer.eeldev.com/docfiles/guides/transparent-thumbnails" hreflang="en"><link data-rh="true" rel="alternate" href="https://thumbnailer.eeldev.com/docfiles/guides/transparent-thumbnails" hreflang="x-default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="/assets/css/styles.97c7465c.css">
-<script src="/assets/js/runtime~main.e84707e1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8c2fb009.js" defer="defer"></script>
 <script src="/assets/js/main.0906540b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -16,6 +16,7 @@
     <a class="eel-product-switcher__item" href="https://serveradmincore.eeldev.com">Server Admin Core</a>
     <a class="eel-product-switcher__item" href="https://hostmigrationcore.eeldev.com">HostMigrationCore</a>
     <a class="eel-product-switcher__item" href="https://eoscore.eeldev.com">EOSCore</a>
+    <a class="eel-product-switcher__item" href="https://crossplaycore.eeldev.com">CrossplayCore</a>
     <a class="eel-product-switcher__item" href="https://eventdispatcher.eeldev.com">EventDispatcher</a>
     <a class="eel-product-switcher__item" href="https://foliageplugin.eeldev.com">Foliage Plugin</a>
     <a class="eel-product-switcher__item" href="https://cls.eeldev.com">CommonLoadingScreen</a>
@@ -37,12 +38,16 @@
 <p>The thumbnail is imported as a texture with an alpha channel.</p>
 <p><img decoding="async" loading="lazy" alt="A transparent thumbnail" src="/assets/images/transparent-3-25e47b6648b93be9162ae9b5d15aed9f.png" width="1211" height="789" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="actors">Actors<a href="#actors" class="hash-link" aria-label="Direct link to Actors" title="Direct link to Actors">​</a></h2>
-<p>Static and skeletal meshes are set up by the plugin. An actor Blueprint needs one change: every component that should be visible in the thumbnail must have <strong>Render CustomDepth Pass</strong> turned on. Components without it are removed together with the background.</p>
+<p>Actor Blueprints are set up by the plugin too. When the actor is spawned in the preview, <strong>Render CustomDepth Pass</strong> is turned on for every visible component, also on child actors. Only the actor in the preview is changed, the Blueprint is not.</p>
+<p>These components are not included and are removed together with the background:</p>
 <ul>
-<li>Open the actor Blueprint, select each mesh component and turn on <strong>Rendering → Render CustomDepth Pass</strong>.</li>
+<li>Editor-only components, for example billboards and arrows.</li>
+<li>Components with <strong>Hidden in Game</strong> turned on, or that are not visible.</li>
+<li>Components that are added after the actor is spawned, for example in <strong>BeginPlay</strong>. Components added in the <strong>Construction Script</strong> are included.</li>
 </ul>
-<p><img decoding="async" loading="lazy" alt="Render CustomDepth Pass on the actor components" src="/assets/images/transparent-actor-1-f7ef9d97dace7ad092b0a76451ddb86c.png" width="2128" height="1051" class="img_ev3q"></p>
+<p>To leave a component out of the thumbnail, turn on <strong>Rendering → Hidden in Game</strong> on it in the actor Blueprint.</p>
 <p><img decoding="async" loading="lazy" alt="A transparent actor thumbnail" src="/assets/images/transparent-actor-2-8b2fe8c3177c26d5ff62b530dc151f35.png" width="1311" height="913" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Versions before 2.0.2</div><div class="admonitionContent_BuS1"><p>Actors are set up by the plugin from version 2.0.2. In earlier versions, every component that should be visible in the thumbnail must have <strong>Render CustomDepth Pass</strong> turned on. Components without it are removed together with the background.</p><p>Open the actor Blueprint, select each mesh component and turn on <strong>Rendering → Render CustomDepth Pass</strong>.</p><p><img decoding="async" loading="lazy" alt="Render CustomDepth Pass on the actor components" src="/assets/images/transparent-actor-1-f7ef9d97dace7ad092b0a76451ddb86c.png" width="2128" height="1051" class="img_ev3q"></p></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="nanite">Nanite<a href="#nanite" class="hash-link" aria-label="Direct link to Nanite" title="Direct link to Nanite">​</a></h2>
 <p>Transparent thumbnails don&#x27;t work with Nanite meshes. A red warning is shown below the preview when the selected static mesh has Nanite turned on.</p>
 <ul>
