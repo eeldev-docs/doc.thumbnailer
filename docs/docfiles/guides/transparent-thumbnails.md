@@ -13,8 +13,12 @@ A transparent thumbnail only contains the asset. The background, the floor and t
 
 The preview still shows the background. It is removed when you capture.
 
-:::note Versions before 2.0.2
-Versions of the plugin earlier than 2.0.2 also need the custom depth pass. Open **Edit → Project Settings → Engine → Rendering** and set **Custom Depth-Stencil Pass** to **Enabled on Demand**, or **Enabled with Stencil**.
+Nothing else needs to be set up. No project settings and no changes to your assets are needed.
+
+:::note Only for plugin versions older than 2.0.2
+**Skip this if you use version 2.0.2 or newer.** The plugin does it for you.
+
+Older versions need the custom depth pass to be enabled in the project. Open **Edit → Project Settings → Engine → Rendering** and set **Custom Depth-Stencil Pass** to **Enabled on Demand**, or **Enabled with Stencil**.
 
 ![Custom Depth-Stencil Pass in Project Settings](/img/transparent-1.png)
 :::
@@ -36,8 +40,10 @@ To leave a component out of the thumbnail, turn on **Rendering → Hidden in Gam
 
 ![A transparent actor thumbnail](/img/transparent-actor-2.png)
 
-:::note Versions before 2.0.2
-Actors are set up by the plugin from version 2.0.2. In earlier versions, every component that should be visible in the thumbnail must have **Render CustomDepth Pass** turned on. Components without it are removed together with the background.
+:::note Only for plugin versions older than 2.0.2
+**Skip this if you use version 2.0.2 or newer.** The plugin does it for you, and the actor Blueprint doesn't need to be changed.
+
+In older versions, every component that should be visible in the thumbnail must have **Render CustomDepth Pass** turned on. Components without it are removed together with the background.
 
 Open the actor Blueprint, select each mesh component and turn on **Rendering → Render CustomDepth Pass**.
 

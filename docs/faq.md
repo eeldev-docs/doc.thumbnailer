@@ -10,14 +10,18 @@ description: Answers to common questions and problems with the Thumbnailer plugi
 No asset is selected. Pick a static mesh, skeletal mesh or actor class on the **Asset** tab first.
 
 ## The background is not transparent
-- In versions earlier than 2.0.2, check that **Custom Depth-Stencil Pass** is set to **Enabled on Demand** or **Enabled with Stencil** in **Project Settings → Engine → Rendering**.
 - Check that **Transparent** is checked under **Output**. The **Transparent** badge is shown in the preview when it is.
 - The preview always shows the background. Only the captured thumbnail is transparent.
+- Only for plugin versions older than 2.0.2: check that **Custom Depth-Stencil Pass** is set to **Enabled on Demand** or **Enabled with Stencil** in **Project Settings → Engine → Rendering**. This is not needed in 2.0.2 and newer.
 
 See [Transparent Thumbnails](/docfiles/guides/transparent-thumbnails).
 
 ## Parts of my actor are missing in a transparent thumbnail
-Components that are hidden, have **Hidden in Game** turned on, are editor-only or are added after the actor is spawned (for example in **BeginPlay**) are not included. In versions before 2.0.2, every component that should be visible needs **Render CustomDepth Pass** turned on in the actor Blueprint. See [Actors](/docfiles/guides/transparent-thumbnails#actors).
+Components that are hidden, have **Hidden in Game** turned on, are editor-only or are added after the actor is spawned (for example in **BeginPlay**) are not included.
+
+Only for plugin versions older than 2.0.2: every component that should be visible needs **Render CustomDepth Pass** turned on in the actor Blueprint. This is not needed in 2.0.2 and newer.
+
+See [Actors](/docfiles/guides/transparent-thumbnails#actors).
 
 ## My mesh disappears in a transparent thumbnail
 The mesh has Nanite turned on, and a red warning is shown below the preview. Turn off **Nanite Support** on the mesh, or capture it without a transparent background. See [Nanite](/docfiles/guides/transparent-thumbnails#nanite).
