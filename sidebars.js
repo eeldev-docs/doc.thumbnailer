@@ -15,6 +15,7 @@ const productSwitcher = `
 <details class="eel-product-switcher">
   <summary>Thumbnailer</summary>
   <div class="eel-product-switcher__menu">
+    <a class="eel-product-switcher__item" href="https://aws.eeldev.com">AWS</a>
     <a class="eel-product-switcher__item" href="https://cls.eeldev.com">CommonLoadingScreen</a>
     <a class="eel-product-switcher__item" href="https://crossplaycore.eeldev.com">CrossplayCore</a>
     <a class="eel-product-switcher__item" href="https://eoscore.eeldev.com">EOSCore</a>
@@ -22,7 +23,9 @@ const productSwitcher = `
     <a class="eel-product-switcher__item" href="https://foliageplugin.eeldev.com">Foliage Plugin</a>
     <a class="eel-product-switcher__item" href="https://hostmigrationcore.eeldev.com">HostMigrationCore</a>
     <a class="eel-product-switcher__item" href="https://serveradmincore.eeldev.com">Server Admin Core</a>
+    <a class="eel-product-switcher__item" href="https://serverqueuecore.eeldev.com">ServerQueueCore</a>
     <a class="eel-product-switcher__item" href="https://steamcore-pro.eeldev.com">SteamCore PRO</a>
+    <a class="eel-product-switcher__item" href="https://steamcoreweb.eeldev.com">SteamCoreWeb</a>
     <a class="eel-product-switcher__item eel-product-switcher__item--active" href="/">Thumbnailer</a>
     <a class="eel-product-switcher__item" href="https://eeldev.com" target="_blank" rel="noopener noreferrer">All eelDev plugins ↗</a>
   </div>
